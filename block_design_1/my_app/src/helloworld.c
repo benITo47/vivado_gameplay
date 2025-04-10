@@ -49,6 +49,7 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "xgpio.h"
+#include "xbram.h"
 
 #define LED_CHANNEL 2
 #define LED_MASK 0xF0
@@ -58,7 +59,9 @@
 int main()
 {
 	XGpio Gpio;
-	u32 sw_status, led_disp;
+	XBram Bram;
+	XBram_Config *ConfigPtr;
+	u32 sw_status, led_disp, od;
     init_platform();
     int nr = 0;
     int Status;
@@ -69,11 +72,32 @@ int main()
 		xil_printf("Gpio Initialization Failed\r\n");
 		return XST_FAILURE;
 	}
+
+	ConfigPtr = XBram_LookupConfig(XPAR_BRAM_0_DEVICE_ID);
+	if (ConfigPtr == (XBram_Config *) NULL) {
+		return XST_FAILURE;
+	}
+
+	Status = XBram_CfgInitialize(&Bram, ConfigPtr, ConfigPtr->CtrlBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
 	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED_MASK);
-	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~SWS_MASK);
+	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, SWS_MASK);
 
     print("Hello World\n\r");
     print("Successfully ran Hello World application");
+
+    for(int j = 0; j < 16; j = j + 4){
+		XBram_WriteReg(XPAR_BRAM_0_DEVICE_ID, j, j);
+    }
+    for(int j = 0; j < 16; j = j + 4){
+    	od = XBram_ReadReg(XPAR_BRAM_0_DEVICE_ID, j);
+    	xil_printf("Retrieved from memory (%d): %x\n\r", j, od);
+    	XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, od);
+    	sleep(3);
+    }
 
     while(1){
 		sw_status = XGpio_DiscreteRead(&Gpio, SWS_CHANNEL);
