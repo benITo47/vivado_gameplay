@@ -1,4 +1,4 @@
-17:51:27 **** Incremental Build of configuration Debug for project my_app_system ****
+18:14:23 **** Incremental Build of configuration Debug for project my_app_system ****
 make all 
 Generating bif file for the system project
 Executing command '::scw::generate_bif -xpfm /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm -domains standalone_ps7_cortexa9_0 -bifpath /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app_system/Debug/system.bif' on XSCT
@@ -6,5 +6,5 @@ sdcard_gen --xpfm /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design
 creating BOOT.BIN using /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/bitstream/design_1_wrapper.bit
 Running /local/home/cadmgr/xilinx/Vitis/2023.1/bin/bootgen  -image /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-17:51:35 Build Finished (took 8s.73ms)
+18:14:30 Build Finished (took 7s.742ms)
 

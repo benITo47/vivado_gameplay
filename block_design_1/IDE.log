@@ -108,3 +108,99 @@ con
 ----------------End of Script----------------
 
 17:54:46 INFO  : Launch script is exported to file '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app_system/_ide/scripts/systemdebugger_my_app_system_1_standalone.tcl'
+18:11:41 INFO  : Checking for BSP changes to sync application flags for project 'my_app'...
+18:12:31 INFO  : Checking for BSP changes to sync application flags for project 'my_app'...
+18:13:23 INFO  : Checking for BSP changes to sync application flags for project 'my_app'...
+18:13:41 INFO  : Disconnected from the channel tcfchan#4.
+18:13:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:13:42 INFO  : Jtag cable 'Digilent Zed 210248AA3E0E' is selected.
+18:13:42 INFO  : 'jtag frequency' command is executed.
+18:13:42 INFO  : Context for 'APU' is selected.
+18:13:43 INFO  : System reset is completed.
+18:13:46 INFO  : 'after 3000' command is executed.
+18:13:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA3E0E" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA3E0E-23727093-0"}' command is executed.
+18:13:48 INFO  : Device configured successfully with "/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/bitstream/design_1_wrapper.bit"
+18:13:48 INFO  : Context for 'APU' is selected.
+18:13:48 INFO  : Hardware design and registers information is loaded from '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:13:48 INFO  : 'configparams force-mem-access 1' command is executed.
+18:13:48 INFO  : Context for 'APU' is selected.
+18:13:48 INFO  : Sourcing of '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/psinit/ps7_init.tcl' is done.
+18:13:49 INFO  : 'ps7_init' command is executed.
+18:13:49 INFO  : 'ps7_post_config' command is executed.
+18:13:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:13:49 INFO  : The application '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/Debug/my_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:13:49 INFO  : 'configparams force-mem-access 0' command is executed.
+18:13:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA3E0E" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA3E0E-23727093-0"}
+fpga -file /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/Debug/my_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:13:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:13:49 INFO  : 'con' command is executed.
+18:13:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:13:49 INFO  : Launch script is exported to file '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app_system/_ide/scripts/systemdebugger_my_app_system_2_standalone.tcl'
+18:14:20 INFO  : Checking for BSP changes to sync application flags for project 'my_app'...
+18:14:37 WARN  : channel "tcfchan#4" closed
+18:14:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:14:39 INFO  : Jtag cable 'Digilent Zed 210248AA3E0E' is selected.
+18:14:39 INFO  : 'jtag frequency' command is executed.
+18:14:39 INFO  : Context for 'APU' is selected.
+18:14:39 INFO  : System reset is completed.
+18:14:42 INFO  : 'after 3000' command is executed.
+18:14:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA3E0E" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA3E0E-23727093-0"}' command is executed.
+18:14:44 INFO  : Device configured successfully with "/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/bitstream/design_1_wrapper.bit"
+18:14:45 INFO  : Context for 'APU' is selected.
+18:14:45 INFO  : Hardware design and registers information is loaded from '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:14:45 INFO  : 'configparams force-mem-access 1' command is executed.
+18:14:45 INFO  : Context for 'APU' is selected.
+18:14:45 INFO  : Sourcing of '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/psinit/ps7_init.tcl' is done.
+18:14:45 INFO  : 'ps7_init' command is executed.
+18:14:45 INFO  : 'ps7_post_config' command is executed.
+18:14:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:14:45 INFO  : The application '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/Debug/my_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:14:45 INFO  : 'configparams force-mem-access 0' command is executed.
+18:14:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA3E0E" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA3E0E-23727093-0"}
+fpga -file /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app/Debug/my_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:14:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:14:45 INFO  : 'con' command is executed.
+18:14:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:14:45 INFO  : Launch script is exported to file '/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/my_app_system/_ide/scripts/systemdebugger_my_app_system_3_standalone.tcl'

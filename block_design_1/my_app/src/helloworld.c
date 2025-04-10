@@ -58,7 +58,10 @@
 int main()
 {
 	XGpio Gpio;
+	u32 sw_status, led_disp;
     init_platform();
+    int nr = 0;
+    int Status;
 
 	/* Initialize the GPIO driver */
 	Status = XGpio_Initialize(&Gpio, XPAR_AXI_GPIO_0_BASEADDR);
@@ -67,10 +70,19 @@ int main()
 		return XST_FAILURE;
 	}
 	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED_MASK);
-	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED);
+	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~SWS_MASK);
 
     print("Hello World\n\r");
     print("Successfully ran Hello World application");
+
+    while(1){
+		sw_status = XGpio_DiscreteRead(&Gpio, SWS_CHANNEL);
+		led_disp = sw_status & LED_MASK;
+		XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, led_disp);
+		xil_printf("%d: current value: %x\n\r", nr++, led_disp);
+		sleep(1);
+    }
+
     cleanup_platform();
     return 0;
 }
