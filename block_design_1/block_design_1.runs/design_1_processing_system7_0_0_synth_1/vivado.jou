@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Apr 10 17:25:05 2025
+# Process ID: 7847
+# Current directory: /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.runs/design_1_processing_system7_0_0_synth_1
+# Command line: vivado -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
+# Log file: /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: /home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.runs/design_1_processing_system7_0_0_synth_1/vivado.jou
+# Running On: stud209-4, OS: Linux, CPU Frequency: 3999.411 MHz, CPU Physical cores: 6, Host memory: 16551 MB
+#-----------------------------------------------------------
+source design_1_processing_system7_0_0.tcl -notrace

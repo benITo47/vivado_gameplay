@@ -1,0 +1,15 @@
+verilog xil_defaultlib --include "/local/home/cadmgr/xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../block_design_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../block_design_1.gen/sources_1/bd/design_1/ipshared/aed8/hdl" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.v" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_sim_netlist.v" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_sim_netlist.v" \
+"../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_sim_netlist.v" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_sim_netlist.v" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_sim_netlist.v" \
+"/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/block_design_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
