@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xbram_intr_example_1" location="/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/xbram_intr_example_1" platform="/home/stud2022/2milewski/JOS/lab4/vivado_gameplay/block_design_1/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:zedboard::0.0(custom)" systemProject="xbram_intr_example_1_system" sysConfig="design_1_wrapper" runtime="C/C++" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="b5fd8ee7987251e4a5710dd1c52a999c">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1234503583" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1899260185" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

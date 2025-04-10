@@ -1,0 +1,11 @@
+timestamp=[2025-04-10 17:34:20], mode=WORKBENCH_START, duration=0:00:13.994, duration_ms=13994, data={}
+timestamp=[2025-04-10 17:34:20], mode=WORKBENCH_UI_INIT, duration=0:00:00.059, duration_ms=59, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-04-10 17:34:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.494, duration_ms=494, data={}
+timestamp=[2025-04-10 17:39:10], mode=APP_CREATION, duration=0:00:51.086, duration_ms=51086, data={name=my_app, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2025-04-10 17:40:49], mode=APP_CREATION, duration=0:00:08.431, duration_ms=8431, data={name=xbram_intr_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=design_1_wrapper, application_type=application}
+timestamp=[2025-04-10 17:41:36], mode=APP_CREATION, duration=0:00:08.116, duration_ms=8116, data={name=xgpio_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=design_1_wrapper, application_type=application}
+timestamp=[2025-04-10 17:47:06], mode=PLATFORM_GENERATION, duration=0:00:39.404, duration_ms=39404, data={name=design_1_wrapper}
+timestamp=[2025-04-10 17:47:10], mode=BUILD, duration=0:00:01.191, duration_ms=1191, data={name=my_app, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 17:47:19], mode=BUILD, duration=0:00:07.636, duration_ms=7636, data={name=my_app_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 17:51:26], mode=BUILD, duration=0:00:00.961, duration_ms=961, data={name=my_app, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 17:51:35], mode=BUILD, duration=0:00:08.126, duration_ms=8126, data={name=my_app_system, configuration=Debug, clean_build=false}
