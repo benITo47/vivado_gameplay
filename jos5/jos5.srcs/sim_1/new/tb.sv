@@ -42,10 +42,13 @@ initial begin
     repeat(3) @(posedge clk);
     shinp = 1'b1;
     @(posedge clk) shinp = 1'b0;
+    repeat(4*n + 12) @(posedge clk);
+    shinp = 1'b1;
+    @(posedge clk) shinp = 1'b0;
 end
 
 initial begin
-    repeat(4*n + 5) @(posedge clk);
+    repeat(8*n + 20) @(posedge clk);
     $finish();
 end
 endmodule
