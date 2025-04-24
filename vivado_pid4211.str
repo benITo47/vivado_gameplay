@@ -1,0 +1,538 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:04:56 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 4211
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Apr 24 17:11:21 CEST 2025
+Time zone: 	Central European Standard Time (Europe/Warsaw)
+
+OS: Ubuntu
+OS Version: 5.15.0-136-generic
+OS Architecture: amd64
+Available processors (cores): 6
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	/local/home/cadmgr/xilinx/Vivado/2023.1/tps/lnx64/jre17.0.3_7
+Java executable: 	/local/home/cadmgr/xilinx/Vivado/2023.1/tps/lnx64/jre17.0.3_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	2milewski
+User home directory: /home/stud2022/2milewski
+User working directory: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /local/home/cadmgr/xilinx/Vivado
+HDI_APPROOT: /local/home/cadmgr/xilinx/Vivado/2023.1
+RDI_DATADIR: /local/home/cadmgr/xilinx/Vivado/2023.1/data
+RDI_BINDIR: /local/home/cadmgr/xilinx/Vivado/2023.1/bin
+
+Vivado preferences file: /home/stud2022/2milewski/.Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: /home/stud2022/2milewski/.Xilinx/Vivado/2023.1/
+Vivado layouts directory: /home/stud2022/2milewski/.Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	/local/home/cadmgr/xilinx/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/vivado.log
+Vivado journal file: 	/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-4211-stud209-4
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /local/home/cadmgr/xilinx/Vivado/2023.1
+RDI_BASEROOT: /local/home/cadmgr/xilinx/Vivado
+RDI_BINROOT: /local/home/cadmgr/xilinx/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /local/home/cadmgr/xilinx/Vivado/2023.1/data
+RDI_INSTALLROOT: /local/home/cadmgr/xilinx
+RDI_INSTALLVER: 2023.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: /local/home/cadmgr/xilinx/Vivado/2023.1/lib/lnx64.o/Ubuntu:/local/home/cadmgr/xilinx/Vivado/2023.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /local/home/cadmgr/xilinx/Vitis/2023.1/bin:/local/home/cadmgr/xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /local/home/cadmgr/xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay:stud209-4_1745507463_4170
+RDI_SHARED_DATA: /local/home/cadmgr/xilinx/SharedData/2023.1/data
+RDI_TPS_ROOT: /local/home/cadmgr/xilinx/Vivado/2023.1/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /local/home/cadmgr/xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_DSP: /local/home/cadmgr/xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: /local/home/cadmgr/xilinx/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: /local/home/cadmgr/xilinx/Vivado/2023.1
+XILINX_SDK: /local/home/cadmgr/xilinx/Vitis/2023.1
+XILINX_VITIS: /local/home/cadmgr/xilinx/Vitis/2023.1
+XILINX_VIVADO: /local/home/cadmgr/xilinx/Vivado/2023.1
+XILINX_VIVADO_HLS: /local/home/cadmgr/xilinx/Vivado/2023.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,381 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,399 MB. GUI used memory: 72 MB. Current time: 4/24/25, 5:11:22 PM CEST
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 39 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "jos5"); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectButton("BACK", "< Back"); // JButton
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // f: FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // f: TRUE
+selectButton("NEXT", "Next >"); // JButton
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // bd
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "top"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+dismissFileChooser();
+// Elapsed time: 11 seconds
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a
+dismissFileChooser();
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a
+// Elapsed time: 14 seconds
+selectComboBox(PAResourceAtoD.CreateConstraintsFilePanel_FILE_TYPE, "XDC", 0); // bd
+// Elapsed time: 29 seconds
+applyEnter(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, (String) null); // Q
+// HOptionPane Warning: 'Please enter a file name. (Create Constraints File)'
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Create Constraints File"); // u
+// [GUI Memory]: 113 MB (+116318kb) [00:02:36]
+// [Engine Memory]: 1,521 MB (+1443199kb) [00:02:36]
+// [GUI Memory]: 119 MB (+325kb) [00:02:36]
+// [GUI Memory]: 141 MB (+16788kb) [00:02:36]
+selectButton("NEXT", "Next >"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 1,533 MB. GUI used memory: 74 MB. Current time: 4/24/25, 5:13:52 PM CEST
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "zed"); // OverlayTextField
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // g
+// [GUI Memory]: 246 MB (+101864kb) [00:02:42]
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // g
+setText("PAResourceAtoD.BoardChooser_BOARD_TABLE_SEARCH_FIELD", "zed"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "ZedBoard Zynq Evaluation and Development Kit ; ZedBoard Zynq Evaluation and Development Kit ; ZedBoard Zynq Evaluation and Development Kit ; avnet.com ; 1.4 ; ZedBoard Zynq Evaluation and Development Kit ; 484 ; d ; 200 ; 53200 ; 106400 ; 140 ; 0 ; 220 ;  ; 32 ;  ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 0, "ZedBoard Zynq Evaluation and Development Kit", 0, false); // l
+selectButton("NEXT", "Next >"); // JButton
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: create_project jos5 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5 -part xc7z020clg484-1 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 273 MB (+15848kb) [00:02:50]
+// [Engine Memory]: 1,655 MB (+61273kb) [00:02:50]
+// WARNING: HEventQueue.dispatchEvent() is taking  1298 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/local/home/cadmgr/xilinx/Vivado/2023.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7704.418 ; gain = 86.906 ; free physical = 10571 ; free virtual = 15500 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property board_part avnet.com:zedboard:part0:1.4 [current_project] 
+// Tcl Command: 'file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new'
+// Tcl Message: file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property simulator_language Verilog [current_project] 
+// Tcl Message: close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv 
+dismissDialog("New Project"); // f
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, (String) null, 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk", 0, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "rst", 1, "Port Name", 0); // x
+// Elapsed time: 12 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "shinp", 2, "Port Name", 0); // x
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "npulses", 3, "Port Name", 0); // x
+// TclEventType: FILE_SET_CHANGE
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 187 seconds
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// Elapsed Time for: 'L.f': 32s
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 1); // E
+// Elapsed Time for: 'L.f': 34s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // E - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,704 MB. GUI used memory: 91 MB. Current time: 4/24/25, 5:14:37 PM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, false, false, false, false, false, true); // E - Double Click
+// Elapsed Time for: 'L.f': 36s
+// [Engine Memory]: 1,763 MB (+25664kb) [00:03:27]
+selectCodeEditor("top.sv", 57, 403); // ad
+// Elapsed Time for: 'L.f': 38s
+selectCodeEditor("top.sv", 43, 351); // ad
+// Elapsed time: 13 seconds
+typeControlKey(null, null, 'z');
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true); // E - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true, false, false, false, true, false); // E - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a
+// Tcl Command: 'file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1'
+// Tcl Message: file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1 
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "io"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Constraints File"); // u
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "time"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Constraints File"); // u
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Command: 'file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new'
+// Tcl Message: file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new 
+// Tcl Message: close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc 
+// Tcl Message: close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc 
+dismissDialog("Add Constraint"); // bq
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // E
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, io.xdc]", 4, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, io.xdc]", 4, false, false, false, false, false, true); // E - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 1); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,823 MB. GUI used memory: 93 MB. Current time: 4/24/25, 5:15:27 PM CEST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "io.xdc", 2); // o
+// Elapsed Time for: 'L.f': 01m:26s
+// Elapsed Time for: 'L.f': 01m:28s
+// Elapsed time: 98 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, time.xdc]", 5, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, time.xdc]", 5, false, false, false, false, false, true); // E - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,862 MB. GUI used memory: 94 MB. Current time: 4/24/25, 5:17:07 PM CEST
+typeControlKey((HResource) null, "time.xdc", 'v'); // ad
+// [Engine Memory]: 1,863 MB (+12876kb) [00:05:56]
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "io.xdc", 2); // o
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "io.xdc", 2); // o
+typeControlKey((HResource) null, "io.xdc", 'v'); // ad
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 1); // o
+selectCodeEditor("top.sv", 147, 359); // ad
+// HMemoryUtils.trashcanNow. Engine heap size: 1,894 MB. GUI used memory: 94 MB. Current time: 4/24/25, 5:17:32 PM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04m:58s
+// Elapsed Time for: 'L.f': 05m:00s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,912 MB. GUI used memory: 94 MB. Current time: 4/24/25, 5:19:02 PM CEST
+// Elapsed time: 93 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectCodeEditor("top.sv", 161, 417); // ad
+// Elapsed time: 267 seconds
+selectCodeEditor("top.sv", 159, 473); // ad
+selectCodeEditor("top.sv", 89, 286); // ad
+typeControlKey((HResource) null, "top.sv", 'v'); // ad
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 09m:40s
+// Elapsed Time for: 'L.f': 09m:42s
+// Elapsed time: 44 seconds
+selectCodeEditor("top.sv", 414, 434); // ad
+// Elapsed time: 18 seconds
+selectCodeEditor("top.sv", 116, 227); // ad
+// Elapsed time: 90 seconds
+selectCodeEditor("top.sv", 64, 312); // ad
+// Elapsed time: 10 seconds
+selectCodeEditor("top.sv", 407, 308); // ad
+selectCodeEditor("top.sv", 402, 152); // ad
+// Elapsed time: 46 seconds
+selectCodeEditor("top.sv", 181, 353); // ad
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 13m:20s
+// Elapsed Time for: 'L.f': 13m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 13m:26s
+// Elapsed Time for: 'L.f': 13m:28s
+// Elapsed time: 62 seconds
+selectCodeEditor("top.sv", 353, 326); // ad
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 14m:18s
+// Elapsed Time for: 'L.f': 14m:20s
+selectCodeEditor("top.sv", 203, 442); // ad
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 14m:28s
+// Elapsed Time for: 'L.f': 14m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 94 MB. Current time: 4/24/25, 5:28:32 PM CEST
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, time.xdc]", 5, false, false, false, false, true, false); // E - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // V
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, io.xdc]", 4, false, false, false, false, true, false); // E - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // V
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc 
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true, false, false, false, true, false); // E - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // al
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RESET, "Reset Simulation"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // bd
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "tb"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new'
+dismissDialog("Create Source File"); // m
+// Tcl Message: file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new 
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 21 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // p
+// Elapsed Time for: 'L.f': 15m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 15m:48s
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 15m:50s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,968 MB. GUI used memory: 95 MB. Current time: 4/24/25, 5:29:52 PM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.sv)]", 7, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.sv)]", 7, false, false, false, false, false, true); // E - Double Click
+// [Engine Memory]: 1,988 MB (+32977kb) [00:18:41]
+// Elapsed Time for: 'L.f': 15m:52s
+selectCodeEditor("tb.sv", 134, 428); // ad
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 18m:36s
+// Elapsed Time for: 'L.f': 18m:38s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 164 seconds
+selectCodeEditor("tb.sv", 340, 316); // ad
+// Elapsed Time for: 'L.f': 18m:40s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 1); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 18m:42s
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'L.f': 18m:44s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.sv", 2); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 2,037 MB. GUI used memory: 96 MB. Current time: 4/24/25, 5:32:47 PM CEST
+// Elapsed Time for: 'L.f': 18m:46s
+selectCodeEditor("tb.sv", 35, 273); // ad
+selectCodeEditor("tb.sv", 126, 292); // ad
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 3 
+// Tcl Message: [Thu Apr 24 17:33:11 2025] Launched synth_1... Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 66 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Completed"); // Q.a
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'tb' INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from '/local/home/cadmgr/xilinx/Vivado/2023.1/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim' 
+// Tcl Message: xvlog --incr --relax -L uvm -prj tb_vlog.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module top INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module tb INFO: [VRFC 10-2263] Analyzing Verilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 2,100 MB (+13713kb) [00:23:16]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,130 MB. GUI used memory: 106 MB. Current time: 4/24/25, 5:34:27 PM CEST
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: $finish called at time : 245 ns : File "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" Line 49 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 8151.621 ; gain = 88.824 ; free physical = 10226 ; free virtual = 15501 
+// 'd' command handler elapsed time: 6 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 2); // o
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, npulses]", 3, false); // k
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,111 MB. GUI used memory: 104 MB. Current time: 4/24/25, 5:34:35 PM CEST
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // u
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb", "DesignTask.SIMULATION");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // u
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bq
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 1); // o
