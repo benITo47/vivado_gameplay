@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Apr 24 17:11:05 2025
-# Process ID: 4211
+# Start of session at: Thu Apr 24 18:27:08 2025
+# Process ID: 20955
 # Current directory: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay
 # Command line: vivado
 # Log file: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/vivado.log
@@ -113,264 +113,789 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /local/home/cadmgr/xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at /local/home/cadmgr/xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-create_project jos5 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5 -part xc7z020clg484-1
+create_project jos_lab5 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5 -part xc7z020clg484-1
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/local/home/cadmgr/xilinx/Vivado/2023.1/data/ip'.
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7704.418 ; gain = 86.906 ; free physical = 10571 ; free virtual = 15500
 set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
-file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new
+file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new
 set_property simulator_language Verilog [current_project]
-close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv w ]
-add_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv
+close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new/cnt.sv w ]
+add_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new/cnt.sv
+file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/constrs_1/new
+close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/constrs_1/new/io.xdc w ]
+add_files -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/constrs_1/new/io.xdc
+close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/constrs_1/new/timing.xdc w ]
+add_files -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/constrs_1/new/timing.xdc
 update_compile_order -fileset sources_1
-file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1
-file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new
-close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc w ]
-add_files -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc
-close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc w ]
-add_files -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc
-export_ip_user_files -of_objects  [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc] -no_script -reset -force -quiet
-remove_files  -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/time.xdc
-export_ip_user_files -of_objects  [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc] -no_script -reset -force -quiet
-remove_files  -fileset constrs_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/constrs_1/new/io.xdc
-file mkdir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv w ]
-add_files -fileset sim_1 /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
 launch_runs synth_1 -jobs 3
 WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
-[Thu Apr 24 17:33:11 2025] Launched synth_1...
-Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.runs/synth_1/runme.log
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/local/home/cadmgr/xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xvlog --incr --relax -L uvm -prj tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /local/home/cadmgr/xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.top_default
-Compiling module xil_defaultlib.tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-$finish called at time : 245 ns : File "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" Line 49
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 8151.621 ; gain = 88.824 ; free physical = 10226 ; free virtual = 15501
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/local/home/cadmgr/xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xvlog --incr --relax -L uvm -prj tb_vlog.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /local/home/cadmgr/xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-$finish called at time : 245 ns : File "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" Line 49
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+[Thu Apr 24 18:35:40 2025] Launched synth_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 3
+[Thu Apr 24 18:37:00 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+set_property used_in_synthesis false [get_files  /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/constrs_1/new/io.xdc]
 reset_run synth_1
-INFO: [Project 1-1160] Copying file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.runs/synth_1/top.dcp to /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+INFO: [Project 1-1160] Copying file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/cnt.dcp to /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/utils_1/imports/synth_1 and adding it to utils fileset
 WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.runs/synth_1
+1. Failed to delete one or more files in run directory /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1
 
 launch_runs synth_1 -jobs 3
-[Thu Apr 24 17:43:01 2025] Launched synth_1...
-Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.runs/synth_1/runme.log
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/local/home/cadmgr/xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xvlog --incr --relax -L uvm -prj tb_vlog.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /local/home/cadmgr/xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-$finish called at time : 245 ns : File "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" Line 49
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/local/home/cadmgr/xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xvlog --incr --relax -L uvm -prj tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /local/home/cadmgr/xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.top_default
-Compiling module xil_defaultlib.tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-$finish called at time : 595 ns : File "/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos5/jos5.srcs/sim_1/new/tb.sv" Line 52
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 8206.625 ; gain = 20.000 ; free physical = 10239 ; free virtual = 15492
+[Thu Apr 24 18:38:02 2025] Launched synth_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 3
+[Thu Apr 24 18:39:06 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8221.004 ; gain = 0.000 ; free physical = 8995 ; free virtual = 15046
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8827.973 ; gain = 0.000 ; free physical = 8421 ; free virtual = 14473
+Restored from archive | CPU: 0.020000 secs | Memory: 0.065308 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8827.973 ; gain = 0.000 ; free physical = 8421 ; free virtual = 14473
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8827.973 ; gain = 0.000 ; free physical = 8421 ; free virtual = 14473
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 9035.895 ; gain = 1124.320 ; free physical = 8308 ; free virtual = 14367
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Apr 24 18:40:44 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2023.1.0
+  ****** Build date   : Apr 10 2023-17:59:24
+    **** Build number : 2023.1.1681142364
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248AA3EB6
+set_property PROGRAM.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new/red.sv w ]
+add_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new/red.sv
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/utils_1/imports/synth_1/cnt.dcp with file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/cnt.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Thu Apr 24 18:49:29 2025] Launched synth_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Apr 24 18:58:48 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new/filter.sv w ]
+add_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/new/filter.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/utils_1/imports/synth_1/cnt.dcp with file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/cnt.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Thu Apr 24 19:08:24 2025] Launched synth_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 3
+[Thu Apr 24 19:09:37 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Apr 24 19:10:58 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0
+set_property -dict [list \
+  CONFIG.C_DATA_DEPTH {2048} \
+  CONFIG.C_NUM_OF_PROBES {4} \
+  CONFIG.C_PROBE0_WIDTH {3} \
+  CONFIG.C_PROBE1_WIDTH {3} \
+  CONFIG.C_PROBE2_WIDTH {8} \
+  CONFIG.C_PROBE3_WIDTH {3} \
+] [get_ips ila_0]
+generate_target {instantiation_template} [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+generate_target all [get_files  /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ila_0
+export_ip_user_files -of_objects [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/ip/ila_0/ila_0.xci]
+launch_runs ila_0_synth_1 -jobs 3
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ila_0
+[Thu Apr 24 19:13:16 2025] Launched ila_0_synth_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/ila_0_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'ila_0'... please wait for 'ila_0_synth_1' run to finish...
+wait_on_run ila_0_synth_1
+[Thu Apr 24 19:13:16 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:13:21 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:13:26 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:13:31 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:13:41 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:13:51 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:14:01 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:14:11 2025] Waiting for ila_0_synth_1 to finish...
+[Thu Apr 24 19:14:31 2025] Waiting for ila_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log ila_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ila_0.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ila_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1341.340 ; gain = 0.023 ; free physical = 6009 ; free virtual = 13503
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ila_0
+Command: synth_design -top ila_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 33520
+INFO: [Synth 8-11241] undeclared symbol 'rddata_rst_i', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:2188]
+INFO: [Synth 8-11241] undeclared symbol 'datard_overflow', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:2235]
+INFO: [Synth 8-11241] undeclared symbol 'datard_underflow', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:2236]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6379]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6381]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6412]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6414]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6447]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6449]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:69]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:71]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:109]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:111]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:150]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:152]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:192]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:194]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:235]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:237]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:279]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:281]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:324]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:326]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:370]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:372]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:419]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:465]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:467]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:514]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:516]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:564]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:566]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:615]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:617]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6554]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6556]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6589]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:6591]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:69]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:71]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:109]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:111]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:150]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:152]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:192]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:194]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:235]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:237]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:279]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:281]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:324]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:326]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:370]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:372]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:419]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:465]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:467]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:514]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:516]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:564]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:566]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:615]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:617]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:10347]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:10349]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:10380]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:10382]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:10413]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/xsdbm_v3_0_vl_rfs.v:10415]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:65]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:67]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:100]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:102]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:135]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:137]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:170]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:172]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:205]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:207]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:240]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:242]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:275]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:277]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:310]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:312]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:345]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:347]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:380]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:382]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:415]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:450]
+INFO: [Common 17-14] Message 'Synth 8-11241' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4527]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4528]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4529]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4530]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4531]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4532]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4586]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4587]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:4588]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/hdl/ila_v6_2_syn_rfs.v:5486]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2071.578 ; gain = 383.770 ; free physical = 5008 ; free virtual = 12501
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1971]
+INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (0#1) [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1971]
+INFO: [Synth 8-6157] synthesizing module 'CARRY4' [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1934]
+INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (0#1) [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1934]
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132323]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132323]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132173]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132173]
+INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132262]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (0#1) [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132262]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:39148]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [/local/home/cadmgr/xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:39148]
+WARNING: [Synth 8-7071] port 'clk_nobuf' of module 'ila_v6_2_13_ila' is unconnected for instance 'inst' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+WARNING: [Synth 8-7071] port 'clkdiv_out' of module 'ila_v6_2_13_ila' is unconnected for instance 'inst' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+WARNING: [Synth 8-7071] port 'trig_in' of module 'ila_v6_2_13_ila' is unconnected for instance 'inst' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+WARNING: [Synth 8-7071] port 'trig_in_ack' of module 'ila_v6_2_13_ila' is unconnected for instance 'inst' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+WARNING: [Synth 8-7071] port 'trig_out' of module 'ila_v6_2_13_ila' is unconnected for instance 'inst' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+WARNING: [Synth 8-7071] port 'trig_out_ack' of module 'ila_v6_2_13_ila' is unconnected for instance 'inst' [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_13_ila' has 1033 connections declared, but only 1027 given [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:3215]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:48]
+WARNING: [Synth 8-3848] Net sl_iport0 in module/entity ila_0 does not have driver. [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/synth/ila_0.v:104]
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[17] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[16] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[15] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[14] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[13] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[12] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[11] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[10] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[9] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[8] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[7] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[6] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[5] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[4] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[3] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[2] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[1] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[0] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[10] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[9] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[8] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[7] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[6] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[5] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[4] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_gen_v8_4_6_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[17] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[16] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[15] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[14] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[13] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[12] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[11] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[10] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[9] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[8] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[7] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[6] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[5] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[4] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[3] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[2] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[1] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[17] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[16] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[15] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[14] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[13] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[12] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[11] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[10] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[9] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[7] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[6] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[5] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[4] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[3] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[2] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[1] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_v8_4_6_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTA[0] in module blk_mem_gen_v8_4_6_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEA[1] in module blk_mem_gen_v8_4_6_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTB[0] in module blk_mem_gen_v8_4_6_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[1] in module blk_mem_gen_v8_4_6_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_6_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_6_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTA in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENA in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTB in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEB in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[17] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[16] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[15] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[14] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[13] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[12] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[11] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[10] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[9] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_v8_4_6_blk_mem_input_block is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2476.867 ; gain = 789.059 ; free physical = 4607 ; free virtual = 12102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2476.867 ; gain = 789.059 ; free physical = 4607 ; free virtual = 12102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2476.867 ; gain = 789.059 ; free physical = 4607 ; free virtual = 12102
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2476.867 ; gain = 0.000 ; free physical = 4607 ; free virtual = 12102
+INFO: [Netlist 29-17] Analyzing 72 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/ila_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/ila_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'inst'
+Parsing XDC File [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/ila_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/ila_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2524.891 ; gain = 0.000 ; free physical = 4605 ; free virtual = 12101
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 52 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 44 instances
+  CFGLUT5 => SRLC32E: 8 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2524.891 ; gain = 0.000 ; free physical = 4605 ; free virtual = 12101
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4593 ; free virtual = 12090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4593 ; free virtual = 12090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/ila_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4593 ; free virtual = 12090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized3'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized4'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ltlib_v1_0_0_generic_memrd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized3'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized4'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              RESET_ADDR |                          0000001 |                          0000001
+            REQUEST_READ |                          0000010 |                          0000010
+           WAIT_READ_ACK |                          0000100 |                          0000100
+             OUTPUT_DATA |                          0001000 |                          0001000
+                    IDLE |                          0010000 |                          0010000
+         INCREMENT_BLOCK |                          0100000 |                          0100000
+       INCREMENT_ADDRESS |                          1000000 |                          1000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_0_generic_memrd'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4594 ; free virtual = 12091
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4594 ; free virtual = 12091
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin dummy_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[36] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[35] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[34] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[33] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[32] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    19|
+|2     |CFGLUT5  |    52|
+|3     |LUT1     |    30|
+|4     |LUT2     |    54|
+|5     |LUT3     |   100|
+|6     |LUT4     |   103|
+|7     |LUT5     |    75|
+|8     |LUT6     |   429|
+|9     |MUXF7    |     3|
+|10    |RAMB36E1 |     1|
+|11    |SRL16E   |    21|
+|12    |SRLC16E  |     2|
+|13    |SRLC32E  |    17|
+|14    |FDRE     |  1281|
+|15    |FDSE     |    10|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2627 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 2524.891 ; gain = 789.059 ; free physical = 4595 ; free virtual = 12092
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2524.891 ; gain = 837.082 ; free physical = 4595 ; free virtual = 12092
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2524.891 ; gain = 0.000 ; free physical = 4874 ; free virtual = 12371
+INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2524.891 ; gain = 0.000 ; free physical = 4874 ; free virtual = 12371
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 52 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 44 instances
+  CFGLUT5 => SRLC32E: 8 instances
+
+Synth Design complete | Checksum: d1505f5a
+INFO: [Common 17-83] Releasing license: Synthesis
+188 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2524.891 ; gain = 1175.613 ; free physical = 4874 ; free virtual = 12371
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2131.342; main = 1797.595; forked = 375.264
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3494.426; main = 2524.895; forked = 985.539
+INFO: [Common 17-1381] The checkpoint '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/ila_0_synth_1/ila_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ila_0, cache-ID = 4467b98832e5acc0
+INFO: [Coretcl 2-1174] Renamed 118 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/ila_0_synth_1/ila_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ila_0_utilization_synth.rpt -pb ila_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 24 19:14:30 2025...
+[Thu Apr 24 19:14:41 2025] ila_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:01:25 . Memory (MB): peak = 9633.758 ; gain = 0.000 ; free physical = 6457 ; free virtual = 13965
+export_simulation -of_objects [get_files /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/sources_1/ip/ila_0/ila_0.xci] -directory /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.ip_user_files/sim_scripts -ip_user_files_dir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.ip_user_files -ipstatic_source_dir /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.cache/compile_simlib/modelsim} {questa=/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.cache/compile_simlib/questa} {xcelium=/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.cache/compile_simlib/xcelium} {vcs=/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.cache/compile_simlib/vcs} {riviera=/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.srcs/utils_1/imports/synth_1/cnt.dcp with file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/cnt.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Thu Apr 24 19:16:51 2025] Launched synth_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/synth_1/runme.log
+[Thu Apr 24 19:16:51 2025] Launched impl_1...
+Run output will be captured here: /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/runme.log
+set_property PROBES.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.runs/impl_1/cnt.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"monitor"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"monitor"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Apr-24 19:21:25
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"monitor"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"monitor"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Apr-24 19:21:25
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/stud2022/2milewski/JOS/lab5/vivado_gameplay/jos_lab5/jos_lab5.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
